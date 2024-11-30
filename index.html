@@ -36,14 +36,15 @@
     </style>
 </head>
 <body>
-    <h1>Current Time in Ankara, Turkey</h1>
+    <h1>Current Time in Gnomenland</h1>
     <div id="time">Loading...</div>
     <script>
         function updateTime() {
             // Create a new Date object with Ankara's timezone offset
             const now = new Date();
-            const options = { timeZone: 'Europe/Istanbul', hour: '2-digit', minute: '2-digit', second: '2-digit' };
-            const timeString = now.toLocaleTimeString('en-US', options);
+            now.setTime(now.getTime()+1);
+            const options = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
+            const timeString = now.toLocaleTimeString('de-DE', options);
             document.getElementById('time').textContent = timeString;
         }
 
