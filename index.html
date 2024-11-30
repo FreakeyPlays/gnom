@@ -42,7 +42,7 @@
         function updateTime() {
             // Create a new Date object with Ankara's timezone offset
             const now = new Date();
-            now.setTime(now.getTime()+1);
+            now.setHours(now.getHours()+2);
             const options = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
             const timeString = now.toLocaleTimeString('de-DE', options);
             document.getElementById('time').textContent = timeString;
